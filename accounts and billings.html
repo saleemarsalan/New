@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account and Billings</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <style>
+        .bg-light {
+            --bs-bg-opacity: 1;
+            background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+        }
+
+        .px-5 {
+            padding-right: 3rem !important;
+            padding-left: 3rem !important;
+        }
+
+        .shadow {
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+        }
+
+        /*  .container {
+            max-width: 540px;
+        } */
+
+        /* .container {
+            width: 100%;
+            padding-right: var(--bs-gutter-x, .75rem);
+            padding-left: var(--bs-gutter-x, .75rem);
+            margin-right: auto;
+            margin-left: auto;
+        } */
+
+        div {
+            display: block;
+        }
+
+        .pt-5 {
+            padding-top: 3rem !important;
+        }
+
+        .mt-5 {
+            margin-top: 3rem !important;
+        }
+
+        .my-5 {
+            margin-top: 3rem !important;
+            margin-bottom: 3rem !important;
+        }
+
+        .justify-content-center {
+            justify-content: center !important;
+        }
+
+        .row {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: calc(-1 * var(--bs-gutter-y));
+            margin-right: calc(-.5 * var(--bs-gutter-x));
+            margin-left: calc(-.5 * var(--bs-gutter-x));
+        }
+
+        .mt-5 {
+            margin-top: 3rem !important;
+        }
+
+        .col-sm-6 {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+
+        .row>* {
+            /*  flex-shrink: 0;
+    width: 100%; */
+            max-width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            /*  margin-top: var(--bs-gutter-y); */
+        }
+
+
+
+        .headingnut {
+            color: #2b1710;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: .5rem;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        .row {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+        }
+
+
+        .paranut {
+            color: #422419;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .d-flex {
+            display: flex !important;
+        }
+
+        .row>* {
+            flex-shrink: 0;
+            width: 100%;
+            max-width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-top: var(--bs-gutter-y);
+        }
+
+        .pi {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #422419;
+            font-size: 70px;
+        }
+
+        /*    body
+        {
+            background-color: #422419;
+        } */
+
+        .arsalan {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #422419;
+        }
+
+        img {
+            padding-left: 120px;
+        }
+
+
+        .item-padding {
+            padding: 40px 20px;
+        }
+
+        h3 {
+            color: #222;
+            font-family: "Ubuntu", sans-serif;
+            font-size: 18px !important;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            margin-top: 0;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        .section-padding {
+            padding: 130px 0;
+        }
+
+        h3 {
+            -webkit-transition: .3s;
+            color: #222;
+            -o-transition: .3s;
+            -moz-transition: .3s;
+            transition: .3s;
+        }
+
+        .col-lg-3:hover {
+            z-index: 1;
+            transform: scale(1.04);
+            transition: 0.4s;
+        }
+
+        .single-feature:hover {
+            background: #fff;
+            box-shadow: 1px 1px 1px 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="pi">Accounts and Billings</h1>
+    <div class="container px-5 bg-light shadow">
+        <div class="row justify-content-center my-5 mt-5 pt-5">
+            <div class="col-md-7 col-sm-6 mt-5">
+                <h1 class="text-center headingnut" style="font-family: QuietlyEndureRegular;">Accounts systems</h1>
+                <p class="paranut mt3 text-center text-justify-center paranut"
+                    style="font-family: QuietlyEndureRegular;">
+                    Hospital accounting covers everything that goes into the hospital's income statement and balance
+                    sheet. That includes patient revenues, other services like parking and food service, salaries for
+                    doctors and other employees, and expenses like rent, supplies, and utilities
+                </p>
+            </div>
+            <div class="col-md-5 col-sm-6 d-flex">
+                <img src="img/27.jpg" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-5 bg-light shadow">
+        <div class="row justify-content-center my-5 mt-5 pt-5">
+            <div class="col-md-7 col-sm-6 mt-5">
+                <h1 class="text-center headingnut" style="font-family: QuietlyEndureRegular;">Billing systems</h1>
+                <p class="paranut mt3 text-center text-justify-center paranut"
+                    style="font-family: QuietlyEndureRegular;">
+
+                <div style="font-family: Georgia, 'Times New Roman', Times, serif; color:#422419 ;">
+                    <h5
+                        style="font-family: Georgia, 'Times New Roman', Times, serif; color:#422419 ; text-align: center;">
+                        10 Steps in the Medical Billing Process</h5>
+
+                    <br>
+                    <ol> 1.Registration. Patient registration is the first step on any medical billing flow chart..<br>
+                        2.Financial Responsibility. ...<br>
+                        3.Superbill Creation. ...<br>
+                        4.Claims Generation. ...<br>
+                        5.Claims Submission. ...<br>
+                        6.Monitor Claim Adjudication. ...<br>
+                        7.Patient Statement Preparation. ...<br>
+                        8.Statement Follow-Up.</ol>
+                </div>
+                </p>
+            </div>
+            <div class="col-md-5 col-sm-6 d-flex">
+                <img src="img/28.jpg" class="img-fluid" alt="" style="height: 70%;">
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="container" style="background-color:white  ;">
+        <div class="row" >
+            <div class="col-md-6" >
+                <h2 class="arsalan" style="font-size: 90px;">Hospital Management</h2>
+                <p class="arsalan">
+                    Design a system for better patient care. Reduce hospital operating costs.<br> Provide MIS
+                    (Management
+                    Information System) <br> report on demand to management for better decision making
+                </p>
+            </div>
+            <div class="col-md-6" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <img src="img/29.webp" alt="">
+
+
+            </div>
+        </div>
+
+    </div>
+    <section class="feature-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-feature text-center item-padding">
+                        <img style="margin-bottom: 40px; padding-right: 100px;"
+                            src="https://preview.colorlib.com/theme/medino/assets/images/xfeature1.png.pagespeed.ic.ORZFEibj-A.webp">
+                        <h3>ADVANCE TECHNOLOGY</h3>
+                        <p style="color: #777;" class="pt-3">
+                            Creeping for female light years that lesser can't evening heaven isn't bearing tree appear
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-feature text-center item-padding mt-4 mt-md-0">
+                        <img style="margin-bottom: 40px;  padding-right: 100px;"
+                            src="https://preview.colorlib.com/theme/medino/assets/images/xfeature2.png.pagespeed.ic.PGWn35ODVt.webp">
+                        <h3>human utilities</h3>
+                        <p style="color:#777 ;" class="pt-3">Creeping for female light years that lesser can't evening
+                            heaven isn't bearing tree appear</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-feature text-center item-padding mt-4 mt-lg-0">
+                        <img style="margin-bottom: 40px;  padding-right: 100px;"
+                            src="https://preview.colorlib.com/theme/medino/assets/images/xfeature3.png.pagespeed.ic.q-PxKHiyBU.webp">
+                        <h3>best account quality</h3>
+                        <p style="color: #777;" class="pt-3">Creeping for female light years that lesser can't evening
+                            heaven isn't bearing tree appear</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-feature text-center item-padding mt-4 mt-lg-0">
+                        <img style="margin-bottom: 40px;  padding-right: 100px;"
+                            src="https://preview.colorlib.com/theme/medino/assets/images/xfeature4.png.pagespeed.ic.oWijP9zSaI.webp">
+                        <h3>Comfortable Billings</h3>
+                        <p style="color: #777;" class="pt-3">Creeping for female light years that lesser can't evening
+                            heaven isn't bearing tree appear</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
